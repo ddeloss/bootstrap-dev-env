@@ -1,7 +1,9 @@
-import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml"]
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
 
 [font]
-size = 18
+size = 24
 
 [font.normal]
 family = "Inconsolata Nerd Font"
