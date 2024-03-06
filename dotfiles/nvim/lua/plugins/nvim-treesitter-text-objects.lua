@@ -43,7 +43,7 @@ return {
         ["m"] = { "<cmd>lua vim.notify('Select outer part of a method/function definition')<cr>", "Outer Function" },
         ["c"] = { "<cmd>lua vim.notify('Select outer part of a class')<cr>", "Outer Class" },
       },
-      ["i"] = {
+      ["c"] = {
         ["="] = { "<cmd>lua vim.notify('Select inner part of an assignment')<cr>", "Inner Assignment" },
         [":"] = { "<cmd>lua vim.notify('Select inner part of an object property')<cr>", "Inner Property" },
         ["a"] = { "<cmd>lua vim.notify('Select inner part of a parameter')<cr>", "Inner Parameter" },
