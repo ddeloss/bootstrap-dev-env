@@ -9,7 +9,7 @@ return {
       -- Register key mappings for vim-fugitive commands
       wk.register({
         g = {
-          name = "+git", -- Group name for git-related commands
+          name = "+git/Gen", -- Group name for git-related commands
           s = { "<cmd>Git<CR>", "Status" }, -- Open git status
           c = { "<cmd>Git commit<CR>", "Commit" }, -- Open commit window
           b = { "<cmd>Git blame<CR>", "Blame" }, -- Git blame for current file

@@ -40,6 +40,7 @@ return {
       },
       filters = {
         custom = { ".DS_Store" },
+        dotfiles = false,
       },
       git = {
         ignore = false,

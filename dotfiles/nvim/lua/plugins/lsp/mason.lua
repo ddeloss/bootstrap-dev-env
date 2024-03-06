@@ -27,21 +27,24 @@ return {
     mason_lspconfig.setup({
       -- list of servers for mason to install
       ensure_installed = {
-        "tsserver",
+        "bash",
+        "css",
+        "dockerfile",
+        "gitignore",
+        "go",
         "html",
-        "cssls",
-        "tailwindcss",
-        "lua_ls",
-        "pyright",
-        "terraformls",
-        "sqlls",
-        "marksman",
-        "jsonls",
-        "gopls",
-        "rust_analyzer",
-        "bashls",
-        "csharp_ls",
-        "autotools_ls",
+        "javascript",
+        "json",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "query",
+        "rust",
+        "terraform",
+        "tsx",
+        "typescript",
+        "vim",
+        "yaml"
       },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed
@@ -49,12 +52,12 @@ return {
 
     mason_tool_installer.setup({
       ensure_installed = {
-        "prettier", -- prettier formatter
-        "stylua", -- lua formatter
-        "isort", -- python formatter
         "black", -- python formatter
-        "pylint", -- python linter
         "eslint_d", -- js linter
+        "isort", -- python formatter
+        "prettier", -- prettier formatter
+        "pylint", -- python linter
+        "stylua", -- lua formatter
         "tflint", -- tf linter
       },
     })

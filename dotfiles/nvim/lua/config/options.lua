@@ -38,3 +38,6 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- wrap searches around
+opt.wrapscan = true
