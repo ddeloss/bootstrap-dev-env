@@ -10,5 +10,17 @@ return
         show_model = true, -- Displays which model you are using at the beginning of your chat session.
         no_auto_close = true, -- Never closes the window automatically.
         debug = false -- Prints errors and the command which is run.
-    }
-}
+    },
+    config = function()
+      require("which-key").setup({})
+
+      -- Setting up the shortcut <leader>gg for Gen Ask
+      local wk = require("which-key")
+      wk.register({
+        g = {
+          name = "+gen", -- optional group name
+          a = { "<cmd>Gen Ask<cr>", "Gen Ask" }, -- The actual command
+        },
+      }, { prefix = "<leader>" })
+    end,
+  }
