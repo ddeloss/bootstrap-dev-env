@@ -30,7 +30,8 @@ else
   curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/InconsolataNerdFont.tar.xz | tar xz --strip 1 -C ~/.local/share/fonts
 fi
 
-sys_install fzf nvim git lazygit ripgrep alacritty tmux
+sys_install fzf neovim thefuck neofetch tldr git lazygit ripgrep alacritty tmux
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 mv ~/.config/nvim{,.bak}
 mv ~/.local/share/nvim{,.bak}
 mv ~/.local/state/nvim{,.bak}
