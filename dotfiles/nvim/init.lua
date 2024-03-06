@@ -1,2 +1,2 @@
-require("dd.core")
-require("dd.lazy")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
