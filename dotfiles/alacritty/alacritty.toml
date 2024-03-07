@@ -3,7 +3,7 @@ import = [
 ]
 
 [font]
-size = 18 
+size = 22
 
 [font.normal]
 family = "Inconsolata Nerd Font"
@@ -14,3 +14,9 @@ decorations = "none"
 [window.padding]
 x = 7
 y = 0
+
+[keyboard]
+bindings = [
+  { key = "Right", mods = "Alt", chars = "\u001BF" },
+  { key = "Left",  mods = "Alt", chars = "\u001BB" },
+]
