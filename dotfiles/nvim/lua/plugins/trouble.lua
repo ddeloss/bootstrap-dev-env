@@ -6,7 +6,7 @@ return {
       require("trouble").setup({
         -- Your trouble.nvim configuration here
         -- For example:
-        auto_open = true, -- Automatically open Trouble when an error is detected
+        auto_open = false, -- Automatically open Trouble when an error is detected
         auto_close = true, -- Automatically close Trouble when it's the last window
         -- Refer to the trouble.nvim documentation for more configuration options
       })
