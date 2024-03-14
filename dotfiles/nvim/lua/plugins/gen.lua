@@ -18,7 +18,7 @@ return
       local wk = require("which-key")
       wk.register({
         g = {
-          name = "+gen", -- optional group name
+          name = "+git/Gen (LLM)", -- optional group name
           a = { "<cmd>Gen Ask<cr>", "Gen Ask" }, -- The actual command
         },
       }, { prefix = "<leader>" })

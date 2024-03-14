@@ -1,6 +1,22 @@
 return {
   "nvim-tree/nvim-tree.lua",
   dependencies = { "nvim-tree/nvim-web-devicons" },
+  opts = {
+    filesystem = {
+      filtered_items = {
+        visible = true,
+        show_hidden_count = true,
+        hide_dotfiles = false,
+        hide_gitignored = true,
+        hide_by_name = {
+        -- '.git',
+        -- '.DS_Store',
+        -- 'thumbs.db',
+        },
+        never_show = {},
+      },
+    }
+  },
   config = function()
     local nvimtree = require("nvim-tree")
 
@@ -37,13 +53,6 @@ return {
             enable = false,
           },
         },
-      },
-      filters = {
-        custom = { ".DS_Store" },
-        dotfiles = false,
-      },
-      git = {
-        ignore = false,
       },
     })
 
