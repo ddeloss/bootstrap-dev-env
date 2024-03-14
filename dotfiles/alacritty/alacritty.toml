@@ -1,12 +1,10 @@
-import = [
-  "~/.config/alacritty/catppuccin-mocha.toml"
-]
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
 
 [font]
-size = 22
+size = 20
 
 [font.normal]
-family = "Inconsolata Nerd Font"
+family = "JetBrainsMono Nerd Font"
 
 [window]
 decorations = "none"
@@ -17,6 +15,6 @@ y = 0
 
 [keyboard]
 bindings = [
-  { key = "Right", mods = "Alt", chars = "\u001BF" },
-  { key = "Left",  mods = "Alt", chars = "\u001BB" },
+    { key = "Right", mods = "Alt", chars = "\u001BF" },
+    { key = "Left", mods = "Alt", chars = "\u001BB" },
 ]
