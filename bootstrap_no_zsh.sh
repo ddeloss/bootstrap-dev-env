@@ -35,7 +35,7 @@ else
     rm JetBrainsMono.tar.gz
 fi
 
-sys_install fzf neovim thefuck neofetch tldr git lazygit ripgrep alacritty tmux
+sys_install eza fd fzf neovim thefuck neofetch tldr git lazygit ripgrep alacritty tmux zoxide
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 git clone https://github.com/catppuccin/tmux ~/.config/tmux/plugins/catppuccin
 
