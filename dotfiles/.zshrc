@@ -5,11 +5,19 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Path exports
 export PATH=/opt/homebrew/Caskroom/miniforge/base/envs/ds-base/bin:/opt/homebrew/Caskroom/miniforge/base/condabin:/opt/homebrew/bin:$PATH
 export PATH="$PATH:/opt/homebrew/opt/qt@5/bin/qmake"
 export PATH="$PATH:/Users/dentondeloss/Library/Application Support/Coursier/bin"
 export PATH=/Users/dentondeloss/.local/bin:$PATH
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
+# Oh My Zsh configuration
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-vi-mode zsh-completions zsh-history-substring-search)
+
+source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -25,9 +33,13 @@ setopt hist_verify
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOME/fzf-git.sh/fzf-git.sh
+
+# Source fzf-git.sh for Git key bindings
+source "$HOME/fzf-git.sh/fzf-git.sh"
+
+# Source Oh My Zsh plugins (installed by bootstrap script)
+source "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 if type brew &>/dev/null; then
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
@@ -36,6 +48,7 @@ autoload -Uz compinit
 compinit
 fi
 
+# Source zsh-vi-mode (installed via Homebrew)
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 export FZF_DEFAULT_OPTS=" \
@@ -90,6 +103,5 @@ _fzf_comprun() {
     *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
-export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 eval $(thefuck --alias)
