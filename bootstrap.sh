@@ -83,6 +83,7 @@ fi
 
 # Copy dotfiles configurations
 cp -R "$PWD"/dotfiles/* "$XDG_CONFIG_HOME"/.
+cp -R "$PWD"/dotfiles/.p10k.zsh "~/.p10k.zsh"/.
 
 echo ""
 echo "✅ Bootstrap complete!"
