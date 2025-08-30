@@ -1,2 +1,14 @@
 
 dotfiles/tmux/plugins/tpm
+/.idea
+dotfiles/nvim/nvim/LICENSE
+dotfiles/nvim/nvim/README.md
+dotfiles/tmux/tmux/plugins/catppuccin/
+dotfiles/tmux/tmux/plugins/tmux-battery/
+dotfiles/tmux/tmux/plugins/tmux-continuum/
+dotfiles/tmux/tmux/plugins/tmux-cpu/
+dotfiles/tmux/tmux/plugins/tmux-resurrect/
+dotfiles/tmux/tmux/plugins/tmux-themepack/
+dotfiles/tmux/tmux/plugins/tmux/
+dotfiles/tmux/tmux/plugins/tpm/
+dotfiles/tmux/tmux/plugins/vim-tmux-navigator/

@@ -1,0 +1,20 @@
+# Core development tools
+brew "btop", "1.4.4"
+brew "eza", "0.23.0"
+brew "fd", "10.2.0"
+brew "fzf", "0.65.1"
+brew "neovim", "0.11.3"
+brew "thefuck", "3.32"
+brew "neofetch", "7.1.0"
+brew "tldr", "1.6.1"
+brew "git", "2.51.0"
+brew "lazygit", "0.54.2"
+brew "ripgrep", "14.1.1"
+brew "alacritty", "0.15.1"
+brew "tmux", "3.5.a"
+brew "zoxide", "0.9.8"
+
+# Fonts and applications
+cask "font-jetbrains-mono-nerd-font"
+cask "font-meslo-lg-nerd-font"
+cask "iterm2" 
