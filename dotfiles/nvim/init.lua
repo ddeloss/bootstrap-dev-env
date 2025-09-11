@@ -2,15 +2,13 @@
 require("config.lazy")
 
 local wk = require("which-key")
-wk.register({
-		D = {
-				name = "+dap",
-				b = {'<Cmd>lua require"dap".toggle_breakpoint()<CR>', "Toggle Breakpoint"},
-				B = {'<Cmd>lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>', "Set Conditional Breakpoint"},
-				r = {'<Cmd>lua require"dap".repl.open()<CR>', "Open REPL"},
-				l = {'<Cmd>lua require"dap".run_last()<CR>', "Run last"},
-				n = {'<Cmd>lua require"dap-python".test_method()<CR>', "Python Test Method"},
-				f = {'<Cmd>lua require"dap-python".test_class()<CR>', "Python Test Class"},
-				s = {'<Cmd>lua require"dap-python".debug_selection()<CR>', "Python Debug Selection"},
-		}
-}, { prefix = "<leader>" })
+wk.add({
+    { "<leader>D", group = "dap" },
+    { "<leader>Db", "<Cmd>lua require'dap'.toggle_breakpoint()<CR>", desc = "Toggle Breakpoint", mode = "n" },
+    { "<leader>DB", "<Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", desc = "Set Conditional Breakpoint", mode = "n" },
+    { "<leader>Dr", "<Cmd>lua require'dap'.repl.open()<CR>", desc = "Open REPL", mode = "n" },
+    { "<leader>Dl", "<Cmd>lua require'dap'.run_last()<CR>", desc = "Run last", mode = "n" },
+    { "<leader>Dn", "<Cmd>lua require'dap-python'.test_method()<CR>", desc = "Python Test Method", mode = "n" },
+    { "<leader>Df", "<Cmd>lua require'dap-python'.test_class()<CR>", desc = "Python Test Class", mode = "n" },
+    { "<leader>Ds", "<Cmd>lua require'dap-python'.debug_selection()<CR>", desc = "Python Debug Selection", mode = "n" },
+})

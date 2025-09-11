@@ -59,14 +59,12 @@ return {
     -- Set keymaps using which-key
     local wk = require("which-key")
 
-    wk.register({
-      e = {
-        name = "+explorer", -- Group name for explorer related mappings
-        e = { "<cmd>NvimTreeToggle<CR>", "Toggle file explorer" },
-        f = { "<cmd>NvimTreeFindFileToggle<CR>", "Find file in explorer" },
-        c = { "<cmd>NvimTreeCollapse<CR>", "Collapse explorer" },
-        r = { "<cmd>NvimTreeRefresh<CR>", "Refresh explorer" },
-      },
-    }, { prefix = "<leader>" })
+    wk.add({
+        { "<leader>e", group = "explorer" },
+        { "<leader>ee", "<cmd>NvimTreeToggle<CR>", desc = "Toggle file explorer", mode = "n" },
+        { "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", desc = "Find file in explorer", mode = "n" },
+        { "<leader>ec", "<cmd>NvimTreeCollapse<CR>", desc = "Collapse explorer", mode = "n" },
+        { "<leader>er", "<cmd>NvimTreeRefresh<CR>", desc = "Refresh explorer", mode = "n" },
+    })
   end,
 }
