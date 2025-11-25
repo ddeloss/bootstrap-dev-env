@@ -1,0 +1,60 @@
+[completion]
+activate_on_typing = true
+copilot = false
+
+[experimental]
+
+[ai]
+rules = ""
+
+[formatting]
+line_length = 79
+
+[keymap]
+preset = "default"
+
+[keymap.overrides]
+
+[display]
+cell_output = "below"
+default_table_page_size = 10
+dataframes = "rich"
+default_width = "medium"
+code_editor_font_size = 14
+theme = "dark"
+
+[save]
+autosave_delay = 5000
+autosave = "after_delay"
+format_on_save = false
+
+[snippets]
+custom_paths = []
+include_default_snippets = true
+
+[package_management]
+manager = "uv"
+
+[server]
+follow_symlink = false
+browser = "default"
+
+[language_servers.pylsp]
+enable_pydocstyle = false
+enable_mypy = true
+enable_pylint = false
+enable_ruff = true
+enabled = true
+enable_pyflakes = false
+enable_flake8 = false
+
+[runtime]
+auto_instantiate = true
+auto_reload = "off"
+on_cell_change = "autorun"
+watcher_on_save = "lazy"
+reactive_tests = true
+std_stream_max_bytes = 1000000
+output_max_bytes = 8000000
+
+[diagnostics]

@@ -93,3 +93,8 @@ _fzf_comprun() {
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 eval $(thefuck --alias)
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/dentondeloss/.lmstudio/bin"
+# End of LM Studio CLI section
+
